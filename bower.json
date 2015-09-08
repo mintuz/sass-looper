@@ -1,23 +1,26 @@
 {
-name: "sass-looper",
-version: "1.0.0",
-authors: [
-"Adam Bulmer <mintuz1990@gmail.com>"
-],
-description: "Sass Looper, loop through a key value pair for each breakpoint and output some utility classes",
-main: "_sass-LOOPER.scss",
-keywords: [
-"Sass",
-"Loop",
-"Scss","
-],
-license: "MIT",
-homepage: "http://mintuz.com",
-ignore: [
-"**/.*",
-"node_modules",
-"bower_components",
-"test",
-"tests"
-]
+  "name": "sass-looper",
+  "version": "1.0.0",
+  "authors": [
+    "Adam Bulmer <mintuz1990@gmail.com>"
+  ],
+  "description": "Sass Looper, loop through a key value pair for each breakpoint and output some utility classes",
+  "main": "_sass-looper.scss",
+  "keywords": [
+    "Sass",
+    "Loop",
+    "Scss"
+  ],
+  "license": "MIT",
+  "homepage": "http://mintuz.com",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "sass-mq": "~3.2.4"
+  }
 }
