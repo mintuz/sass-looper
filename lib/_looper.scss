@@ -1,9 +1,9 @@
-@mixin __util-looper-class-output($breakpoint, $breakpoint-values) {
+@mixin __util-looper-class-output($looper-namespace, $breakpoint, $breakpoint-values) {
   @each $class-name, $styles in $breakpoint-values {
     .#{$looper-namespace}-#{$class-name},
     %#{$looper-namespace}-#{$class-name} {
       @each $property-name, $property-value in $styles {
-        #{$property-name}: $property-value;
+        #{$property-name}: #{$property-value};
       }
     }
   }
@@ -12,7 +12,7 @@
 @mixin looper-initialise($looper-namespace: 'looper', $looper-map: ()) {
   @each $breakpoint, $values in $looper-map {
     @include mq($from: $breakpoint) {
-      @include __util-looper-class-output($breakpoint, $values)
+      @include __util-looper-class-output($looper-namespace, $breakpoint, $values);
     }
   }
 }
